@@ -407,7 +407,7 @@ camelize@1.0.0:
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
-canvas@^2.6.0, canvas@^2.6.1:
+canvas@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/canvas/-/canvas-2.6.1.tgz#0d087dd4d60f5a5a9efa202757270abea8bef89e"
   integrity sha512-S98rKsPcuhfTcYbtF53UIJhcbgIAK533d1kJKMwsMwAIFgfd58MOyxRud3kktlzWiEkFliaJtvyZCBtud/XVEA==
@@ -2907,13 +2907,6 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
-
-text-to-image@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/text-to-image/-/text-to-image-2.2.0.tgz#f90c21c3b9a87078165c14b67a67b19147682f57"
-  integrity sha512-aklA8EzDq6oiZdn49YLu0ws+vWX6xd1IacHFJ1j6KRckhX8Yg6BQzQuJWJyB31sEGiHkVB6jzhp01DFDw1ydfg==
-  dependencies:
-    canvas "^2.6.0"
 
 through@^2.3.6:
   version "2.3.8"
