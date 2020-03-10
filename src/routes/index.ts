@@ -10,7 +10,6 @@ import path from "path"
 const router = Router()
 
 router.get('/', (req: Request, res: Response) => {
-
     registerFont(path.join("src/public", "font", "TmonMonsori.ttf"), { family: "TmonMonsori" })
 
     ti.generate('웨 안돼 ㅠㅠ', {
