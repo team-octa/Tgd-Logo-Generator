@@ -5,7 +5,7 @@ module.exports = {
         'plugin:prettier/recommended',
         'prettier/@typescript-eslint',
     ],
-    plugins: ['@typescript-eslint', 'react'],
+    plugins: ['@typescript-eslint'],
     rules: {
         'jsx-a11y/anchor-is-valid': 'off',
     },
