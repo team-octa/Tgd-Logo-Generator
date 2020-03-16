@@ -8,7 +8,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/a.css" />
-    <link rel="stylesheet" href="/css/container.css" />
   </head>
 
   <body>
@@ -19,20 +18,25 @@
             <img src=<%= src %>>
           </div>
           <div class="box-body">
-            <div class="row"></div>
-            <div class="row">
-              <div class="input-box">
-                <input name="font" type="range" min="10" value=<%= fontSize %> max="70" />
-              </div>
-              <div class="input-box">
-                <input type="range" min="10" value="46" max="70" />
-              </div>
-              <div class="input-box">
-                <input type="range" min="10" value="46" max="70" />
-              </div>
-              <div class="input-box">
-                <input type="range" min="10" value="46" max="70" />
-              </div>
+            <div class="controlBox">
+              <label for=fontSize>폰트 크기</label>
+              <input id="fontSize" name="font" type="range" min="10" value="<%= fontSize %>" max="70" />
+            </div>
+            <div class="controlBox">
+              <label>가로 사이즈</label>
+              <input id="font" type="range" min="10" max="70" />
+            </div>
+            <div class="controlBox">
+              <label>세로 사이즈</label>
+              <input id="font" type="range" min="10" max="70" />
+            </div>
+            <div class="controlBox">
+              <label>외곽선 두께</label>
+              <input id="font" type="range" min="10" max="70" />
+            </div>
+            <div class="controlBox">
+              <label>텍스트</label>
+              <input id="font" type="text" min="10" max="70" />
             </div>
           </div>
           <div class="box-footer">

@@ -3,9 +3,11 @@
 * {
   font-family: 'Noto Sans KR';
   font-weight: 400;
+  box-sizing: border-box;
 }
 
 @import "range";
+@import "form";
 
 body {
   background-color: #f7f7f7;
@@ -77,9 +79,17 @@ body {
         width: auto;
         height: 100%;
 
-        display: flex;
-
-        margin: 35px;
+        margin: 10px 40px;
+        .controlBox {
+          width: 100%;
+          height: fit-content;
+          margin-bottom: 15px;
+          label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+        }
       }
       div.box-footer {
         width: auto;
