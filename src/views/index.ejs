@@ -7,7 +7,7 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/a.css" />
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
 
   <body>
@@ -19,8 +19,15 @@
           </div>
           <div class="box-body">
             <div class="controlBox">
-              <label for=fontSize>폰트 크기</label>
-              <input id="fontSize" name="font" type="range" min="10" value="<%= fontSize %>" max="70" />
+              <label for="fontSize">폰트 크기</label>
+              <input
+                id="fontSize"
+                name="font"
+                type="range"
+                min="10"
+                value="<%= fontSize %>"
+                max="70"
+              />
             </div>
             <div class="controlBox">
               <label>가로 사이즈</label>
