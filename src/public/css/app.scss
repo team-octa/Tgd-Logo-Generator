@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 
-@import "range";
-@import "form";
+@import 'range';
+@import 'form';
 
 body {
   background-color: #f7f7f7;
@@ -108,7 +108,7 @@ body {
           flex-grow: 0.9;
           justify-content: center;
 
-          background-color: #1abc9c;
+          background-color: #42ce9a;
           border: none;
           border-radius: 50px;
 
@@ -118,13 +118,11 @@ body {
           font-weight: 700;
 
           padding: 6px;
+          cursor: pointer;
 
-          &:focus {
-            outline: none;
-          }
-
+          &:focus,
           &:hover {
-            cursor: pointer;
+            outline: none;
           }
         }
 
