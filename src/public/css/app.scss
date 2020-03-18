@@ -80,6 +80,12 @@ body {
         height: 100%;
 
         margin: 10px 40px;
+        .grid-2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          grid-gap: 20px;
+        }
         .controlBox {
           width: 100%;
           height: fit-content;

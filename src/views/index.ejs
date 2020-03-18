@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <title>🎨 트게더 로고 생성기</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -19,6 +21,10 @@
           </div>
           <div class="box-body">
             <div class="controlBox">
+              <label>텍스트</label>
+              <input id="font" type="text" min="10" max="70" />
+            </div>
+            <div class="controlBox">
               <label for="fontSize">폰트 크기</label>
               <input
                 id="fontSize"
@@ -29,21 +35,19 @@
                 max="70"
               />
             </div>
-            <div class="controlBox">
-              <label>가로 사이즈</label>
-              <input id="font" type="range" min="10" max="70" />
-            </div>
-            <div class="controlBox">
-              <label>세로 사이즈</label>
-              <input id="font" type="range" min="10" max="70" />
+            <div class="grid-2" style="margin-top: 50px;">
+              <div class="controlBox">
+                <label>가로 사이즈</label>
+                <input id="font" type="range" min="10" max="70" />
+              </div>
+              <div class="controlBox">
+                <label>세로 사이즈</label>
+                <input id="font" type="range" min="10" max="70" />
+              </div>
             </div>
             <div class="controlBox">
               <label>외곽선 두께</label>
               <input id="font" type="range" min="10" max="70" />
-            </div>
-            <div class="controlBox">
-              <label>텍스트</label>
-              <input id="font" type="text" min="10" max="70" />
             </div>
           </div>
           <div class="box-footer">
