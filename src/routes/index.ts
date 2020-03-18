@@ -6,36 +6,67 @@ import path from 'path'
 
 const router = Router()
 
-router.get('/', (req: Request, res: Response) => {
+router.get('/', (req: Request, res: Response) => {  
   ti.generate('트게더', {
-    debug: true,
     maxWidth: 150,
     fontFamily: 'TmonMonsori',
     fontSize: 48,
     lineHeight: 50,
     bgColor: 'transparent',
-    textColor: '#6b4aa9',
+    textColor: '#6c4baa',
     textAlign: 'center',
+    strokeSize: 3,
+    strokeColor: "#000000",
   }).then(function(dataUri) {
-    res.render('index', { src: dataUri, fontSize: 48 })
+    res.render('index', { 
+      src: dataUri, 
+      text: "트게더",
+      width: 150, 
+      height: 50, 
+      fontSize: 48, 
+      fontColor: "#6c4baa",
+      strokeSize: 3,
+      strokeColor : "#000000"
+    })
   })
 })
 
 router.post('/', (req: Request, res: Response) => {
-  const { font = 46 } = req.body
+  const {
+    text = "트게더",
+    width = 150,
+    height = 50,
+    fontSize = 48,
+    fontColor = "#6c4baa",
+    strokeSize = 3,
+    strokeColor = "#000000"
+  } = req.body
 
-  ti.generate('청게더', {
-    debug: true,
-    maxWidth: 140,
+  ti.generate(text, {
+    debug: false,
+    maxWidth: Number(width),
     fontFamily: 'TmonMonsori',
-    fontSize: font,
-    lineHeight: 50,
-    margin: 5,
+    fontSize: fontSize,
+    lineHeight: Number(height),
     bgColor: 'transparent',
-    textColor: '#8A2BE2',
+    textColor: fontColor,
     textAlign: 'center',
+    strokeSize: strokeSize,
+    strokeColor: strokeColor,
   }).then(dataUri => {
-    res.render('index', { src: dataUri, fontSize: font })
+    res.render('index', {
+      src: dataUri,
+      text,
+      width, 
+      height, 
+      fontSize, 
+      fontColor,
+      strokeSize,
+      strokeColor
+    })
+  }).catch((err) => {
+    console.log(err);
+    
   })
 })
 
