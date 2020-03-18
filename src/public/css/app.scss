@@ -97,13 +97,29 @@ body {
           }
         }
       }
+
+      div.dev-name {
+        text-align: center;
+        padding-bottom: 15px;
+
+        a {
+          color: black;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+
       div.box-footer {
         width: auto;
 
         display: flex;
         flex-flow: row wrap;
 
-        margin: 35px;
+        margin: 20px 35px;
 
         button.select {
           width: auto;
