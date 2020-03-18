@@ -7,6 +7,7 @@ import path from 'path'
 const router = Router()
 
 router.get('/', (req: Request, res: Response) => {  
+
   ti.generate('트게더', {
     maxWidth: 150,
     fontFamily: 'TmonMonsori',
