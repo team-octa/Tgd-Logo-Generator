@@ -133,7 +133,7 @@ body {
           }
         }
 
-        button.gray1 {
+        .gray1 {
           width: 40px;
           height: auto;
 
@@ -141,6 +141,8 @@ body {
           align-items: center;
           flex-grow: 0.1;
           justify-content: center;
+
+          text-decoration: none;
 
           background-color: #eaeaea;
           border: none;
