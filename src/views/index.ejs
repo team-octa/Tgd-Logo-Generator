@@ -22,13 +22,13 @@
           <div class="box-body">
             <div class="controlBox">
               <label>텍스트</label>
-              <input id="font" type="text" min="10" max="70" />
+              <input id="font" type="text" value="<%= text %>" />
             </div>
             <div class="controlBox">
               <label for="fontSize">폰트 크기</label>
               <input
                 id="fontSize"
-                name="font"
+                name="fontSize"
                 type="range"
                 min="10"
                 value="<%= fontSize %>"
@@ -38,25 +38,25 @@
             <div class="grid-2" style="margin-top: 50px;">
               <div class="controlBox">
                 <label>가로 사이즈</label>
-                <input id="font" type="range" min="10" max="70" />
+                <input id="font" name="width" type="range" min="50" value="<%= width %>" max="300" />
               </div>
               <div class="controlBox">
                 <label>세로 사이즈</label>
-                <input id="font" type="range" min="10" max="70" />
+                <input id="font" name="height" type="range" min="10" value="<%= height %>" max="150" />
               </div>
             </div>
             <div class="controlBox">
               <label>외곽선 두께</label>
-              <input id="font" type="range" min="10" max="70" />
+              <input id="font" name="strokeSize" type="range" min="0" value="<%= strokeSize %>" max="10" />
             </div>
             <div class="grid-2" style="margin-top: 50px;">
               <div class="controlBox">
                 <label>텍스트 색상</label>
-                <input id="color" type="color" min="10" max="70" />
+                <input id="color" name="fontColor" type="color" value="<%= fontColor %>" />
               </div>
               <div class="controlBox">
                 <label>외곽선 색상</label>
-                <input id="font" type="color" min="10" max="70" />
+                <input id="font" name="strokeColor" type="color" value="<%= strokeColor %>" />
               </div>
             </div>
           </div>
@@ -64,12 +64,12 @@
             <button action="submit" class="select">
               적용
             </button>
-            <button class="gray1" onclick="refreshAlert()">
+            <a class="gray1" onclick="refreshAlert()">
               <i class="fas fa-sync"></i>
-            </button>
-            <button action="submit" class="gray1">
+            </a>
+            <a href="<%= src %>" class="gray1" download>
               <i class="fas fa-file-download"></i>
-            </button>
+            </a>
           </div>
         </div>
       </form>
