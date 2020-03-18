@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import * as Canvas from 'canvas'
 
-Canvas.registerFont('src/public/font/TmonMonsori.ttf', { family: '', weight: '' })
+Canvas.registerFont('src/public/font/TmonMonsori.ttf', { family: 'TmonMonsori', weight: 'normal', style: 'normal' })
 
 const defaults = {
   debug: false,
@@ -16,6 +16,8 @@ const defaults = {
   fontWeight: 'normal',
   customHeight: 0,
   textAlign: 'left',
+  strokeSize: 3,
+  strokeColor: 'black'
 }
 
 const createTextData = (
@@ -29,6 +31,8 @@ const createTextData = (
   fontWeight,
   customHeight,
   textAlign,
+  strokeSize,
+  strokeColor
 ) => {
   // create a tall context so we definitely can fit all text
   const textCanvas = Canvas.createCanvas(maxWidth, 1000)
@@ -102,8 +106,8 @@ const createTextData = (
   }
   // paint the last line
 
-  textContext.lineWidth = 3
-  textContext.strokeStyle = 'black'
+  textContext.lineWidth = strokeSize
+  textContext.strokeStyle = strokeColor
   textContext.strokeText(line, textX, textY)
 
   textContext.fillText(line, textX, textY)
@@ -127,6 +131,8 @@ const generateImage = (content, config) => {
     conf.fontWeight,
     conf.customHeight,
     conf.textAlign,
+    conf.strokeSize,
+    conf.strokeColor
   )
 
   const canvas = Canvas.createCanvas(conf.maxWidth, textData.height + conf.margin * 2)
@@ -138,19 +144,6 @@ const generateImage = (content, config) => {
   ctx.putImageData(textData, conf.margin, conf.margin)
 
   const dataUrl = canvas.toDataURL()
-
-  if (conf.debug) {
-    const fileName = conf.debugFilename || `${new Date().toISOString().replace(/[\W.]/g, '')}.png`
-
-    return new Promise(resolve => {
-      const pngStream = canvas.createPNGStream()
-      const out = fs.createWriteStream(path.join(process.cwd(), fileName))
-      out.on('close', () => {
-        resolve(dataUrl)
-      })
-      pngStream.pipe(out)
-    })
-  }
 
   return Promise.resolve(dataUrl)
 }
