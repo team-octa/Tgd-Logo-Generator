@@ -1,6 +1,6 @@
 <h1 align="center">🎨 트게더 로고 생성기</h1>
 
-<p align="center">🛠 Maintainer: @cheongan</p>
+<p align="center">🛠 Maintainer: @Curo-Dev</p>
 
 ## 소개
 
